@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import s1 from "../assets/s1.jpg";
 import s2 from "../assets/s2.jpg";
 import s3 from "../assets/s3.jpg";
 import s4 from "../assets/s4.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Hardware = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="flex w-full justify-center flex-wrap">
       <Service
@@ -32,7 +37,7 @@ const Hardware = () => {
 
 const Service = ({ image, title, description }) => (
   <div className="hardwares m-4">
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-96 bg-base-100 shadow-xl" data-aos="zoom-in  ">
       <figure>
         <img src={image} alt="Waitech computer engineering" />
       </figure>

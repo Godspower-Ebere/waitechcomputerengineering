@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import { Link } from "react-router-dom";
 import {
   FiCheckCircle,
   FiSettings,
@@ -9,7 +12,16 @@ import {
   FiArrowDownCircle,
 } from "react-icons/fi"; // Importing react icons for the example
 import Hardware from "../Components/Hardware";
+import Software from "../Components/Software";
+import HardwareInstallation from "../Components/HardwareInstallation";
+import SoftwareInstallation from "../Components/SoftwareInstallation";
+import Testimonial from "../Components/Testimonial";
+import FAQS from "../Components/FAQS";
+
 const Services = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div>
       <Navbar></Navbar>
@@ -81,11 +93,11 @@ const Services = () => {
 
       <section
         data-aos="zoom-in"
-        className="py-5 px-4 bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https//nelpatel.com/wp-content/uploads/fly-images/107300/Testimonial-Examples_Featured-Image-1200x675-c.png')] bg-no-repeat bg-center bg-cover "
+        className="md:m-4 border-[1px] border-black py-5 px-4 bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https//nelpatel.com/wp-content/uploads/fly-images/107300/Testimonial-Examples_Featured-Image-1200x675-c.png')] bg-no-repeat bg-center bg-cover "
       >
         <div className="container mx-auto" data-aos="zoom-in">
           <h2
-            className="text-[30px] font-bold mb-8 text-center"
+            className="text-[30px] font-bold mb-8 text-center uppercase"
             data-aos="zoom-in"
           >
             Computer Repair and Maintenance
@@ -98,19 +110,106 @@ const Services = () => {
             <b> Hardware Repairs</b> & <b>Software Troubleshooting</b>
           </p>
         </div>
-
         <div className="hardware">
-          <h2
-            className="text-[20px] font-bold mb-8 text-center"
+          <h1
+            className="text-[30px] font-bold mt-8 text-center"
             data-aos="zoom-in"
           >
             Hardware Repairs
-          </h2>
-
+          </h1>
+          <hr className="border-[1px] border-black" />
           <Hardware></Hardware>
+        </div>
+        <div className="hardware">
+          <h1
+            className="text-[30px] font-bold mt-8 text-center"
+            data-aos="zoom-in"
+          >
+            Software Troubleshooting
+          </h1>
+          <hr className="border-[1px] border-black" />
+          <Software></Software>
+        </div>
+        <div className="container mx-auto" data-aos="zoom-in">
+          <p className="text-xl">
+            Whether your computer is in need of <b> Hardware Repairs</b> or
+            <b> Software Troubleshooting</b>, you can count on Waitech Computer
+            Engineering to provide reliable and efficient solutions tailored to
+            meet your needs. Contact us today to schedule a repair appointment
+            and get your computer back in top shape!
+          </p>
         </div>
       </section>
 
+      <section
+        data-aos="zoom-in"
+        className="md:m-4  border-[1px] border-black py-5 px-4 bg-[linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https//nelpatel.com/wp-content/uploads/fly-images/107300/Testimonial-Examples_Featured-Image-1200x675-c.png')] bg-no-repeat bg-center bg-cover "
+      >
+        <div className="container mx-auto" data-aos="zoom-in">
+          <h2
+            className="text-[30px] font-bold mb-8 text-center uppercase"
+            data-aos="zoom-in"
+          >
+            Hardware and Software Installation
+          </h2>
+          <p className="text-xl">
+            At Waitech Computer Engineering, we understand the importance of
+            having your hardware and software installed correctly to ensure
+            optimal performance and productivity. Whether you're upgrading your
+            existing system or installing new components, our expert technicians
+            are here to help.
+          </p>
+        </div>
+        <div className="hardware">
+          <h1
+            className="text-[30px] font-bold mt-8 text-center"
+            data-aos="zoom-in"
+          >
+            Hardware Installation
+          </h1>
+          <hr className="border-[1px] border-black" />
+          <HardwareInstallation></HardwareInstallation>
+        </div>
+        <div className="hardware">
+          <h1
+            className="text-[30px] font-bold mt-8 text-center"
+            data-aos="zoom-in"
+          >
+            Software Installation and Configuration
+          </h1>
+          <hr className="border-[1px] border-black" />
+          <SoftwareInstallation></SoftwareInstallation>
+        </div>
+        <div className="container mx-auto" data-aos="zoom-in">
+          <p className="text-xl">
+            Whether you're upgrading your hardware or installing new software
+            applications, you can count on Waitech Computer Engineering to
+            handle all your installation needs with precision and expertise.
+            Contact us today to learn more about how we can help you maximize
+            performance and productivity with our hardware and software
+            installation services.
+          </p>
+        </div>
+      </section>
+      <Testimonial></Testimonial>
+      <div className="intouch w-full flex justify-center" data-aos="zoom-in">
+        <button className="btn btn-primary">
+          <Link to="/contact">GET IN TOUCH WITH US FOR MORE INFO</Link>
+        </button>
+      </div>
+      <section className="py-16 px-4 bg-gray-300" data-aos="zoom-in">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8" data-aos="zoom-in">
+            Frequently Asked Questions (FAQs)
+          </h2>
+          <FAQS></FAQS>
+        </div>
+      </section>
+      <div className="intouch w-full flex justify-center" data-aos="zoom-in">
+        <button className="btn btn-primary">
+          <Link to="/contact">GET IN TOUCH WITH US FOR MORE INFO</Link>
+        </button>
+      </div>
       <Footer></Footer>
     </div>
   );
