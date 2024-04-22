@@ -18,7 +18,7 @@ const About = () => {
     <div>
       {/* Navbar */}
       <Navbar />
-      <div className=" bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('bg2.png')] hero w-full h-[50vh] flex justify-center items-center">
+      <div className=" bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../bg2.png')] hero w-full h-[50vh] flex justify-center items-center">
         <h1 className="mb-5 text-5xl font-bold text-white">About Us</h1>
       </div>
       {/* About Us Section */}
@@ -211,7 +211,7 @@ const About = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('bg2.jpeg')] bg-no-repeat bg-center bg-cover">
+      <section className="py-16 px-4 bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../bg2.jpeg')] bg-no-repeat bg-center bg-cover">
         <div className="container mx-auto text-white">
           <h2 className="text-3xl font-bold mb-8 text-bold text-center">
             Services Offered by Waitech Computer Engineering

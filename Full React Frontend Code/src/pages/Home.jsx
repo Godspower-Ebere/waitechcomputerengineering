@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <Navbar />
-      <section className="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('bg.jpg')] hero min-h-screen bg-cover bg-center relative flex items-center justify-center">
+      <section className="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../bg.jpg')] hero min-h-screen bg-cover bg-center relative flex items-center justify-center">
         <div className="hero-content text-center text-white ">
           <div className="max-w-full mx-auto">
             <h1 className="mb-5 text-5xl font-bold">

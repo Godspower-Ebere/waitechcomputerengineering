@@ -25,7 +25,7 @@ const Services = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className=" bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('bg3.jpg')] hero w-full h-[50vh] flex justify-center items-center">
+      <div className=" bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../bg3.jpg')] hero w-full h-[50vh] flex justify-center items-center">
         <h1 className="mb-5 text-5xl font-bold text-white">Our Services</h1>
       </div>
 
