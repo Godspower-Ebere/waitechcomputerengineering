@@ -8,20 +8,22 @@ const ContactForm = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_f6fxk8n", "template_ahh3tu6", form.current, {
+        publicKey: "iiu2uyLyeNi5P6Pob",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          toast.success("Message Sent Successfully !!!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          toast.error(
+            "Unable to deliver your message check your internet connection"
+          );
         }
       );
   };
@@ -35,19 +37,19 @@ const ContactForm = () => {
 
       <div class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md ">
         <div class="mb-4">
-          <p class="text-gray-700 text-lg">
+          <p class="text-gray-700 text-lg" required>
             <span data-aos="zoom-in" class="font-bold">
               Address:
             </span>{" "}
             No 57, Isojola Street, Ikotun Lagos, Nigeria.
           </p>
-          <p data-aos="zoom-in" class="text-gray-700 text-lg">
+          <p data-aos="zoom-in" class="text-gray-700 text-lg" required>
             <span class="font-bold">Phone:</span> 08131203866, 08024421035
           </p>
-          <p data-aos="zoom-in" class="text-gray-700 text-lg">
+          <p data-aos="zoom-in" class="text-gray-700 text-lg" required>
             <span class="font-bold">Email:</span> akinsowontunde737@gmail.com
           </p>
-          <p data-aos="zoom-in" class="text-gray-700 text-lg">
+          <p data-aos="zoom-in" class="text-gray-700 text-lg" required>
             <span class="font-bold">Business Hours:</span> Monday - Saturday:{" "}
             <br />
             <b>9:00 AM - 7:00 PM</b>
@@ -71,8 +73,9 @@ const ContactForm = () => {
             <input
               type="text"
               id="name"
-              name="name"
+              name="from_name"
               class="form-input w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              required
               placeholder="Enter your name"
             />
           </div>
@@ -86,8 +89,9 @@ const ContactForm = () => {
             <input
               type="email"
               id="email"
-              name="email"
+              name="from_email"
               class="form-input w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              required
               placeholder="Enter your email"
             />
           </div>
@@ -99,11 +103,13 @@ const ContactForm = () => {
               Phone:
             </label>
             <input
-              type="tel"
+              type="number"
               id="phone"
-              name="phone"
+              name="from_number"
               class="form-input w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              required
               placeholder="Enter your Phone Number"
+              max="99999999999"
             />
           </div>
           <div class="mb-4">
@@ -118,6 +124,7 @@ const ContactForm = () => {
               name="message"
               rows="4"
               class="form-textarea w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              required
               placeholder="Enter your message"
             ></textarea>
           </div>
