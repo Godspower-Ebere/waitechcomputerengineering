@@ -15,6 +15,7 @@ import FAQS from "../Components/FAQS";
 import Product from "../Components/Product";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     Aos.init();
@@ -23,17 +24,17 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <Navbar />
-      <section className="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../bg.jpg')] hero min-h-screen bg-cover bg-center relative flex items-center justify-center">
+      <section className="-z-10 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../bg.jpg')]  min-h-screen bg-cover bg-center relative flex items-center justify-center">
         <div className="hero-content text-center text-white ">
           <div className="max-w-full mx-auto">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 text-4xl font-bold">
               Welcome to{" "}
               <ReactTyped
                 strings={["Waitech Computer Engineering"]}
                 typeSpeed={150}
               />
             </h1>
-            <p className="mb-8 text-[25px]">
+            <p className="mb-8 text-[25px] ">
               Your premier destination for top-notch computer repair and IT
               solutions. <br />
               We specialize in{" "}
@@ -52,7 +53,9 @@ const Home = () => {
               />{" "}
               and much more.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">
+              <Link to="/contact">Get Started</Link>
+            </button>
           </div>
           <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2">
             <FiArrowDownCircle className="text-white text-4xl animate-bounce" />
