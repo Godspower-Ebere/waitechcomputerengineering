@@ -16,6 +16,7 @@ import Product from "../Components/Product";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import work from "../assets/bgmain.jpeg";
 const Home = () => {
   useEffect(() => {
     Aos.init();
@@ -63,13 +64,13 @@ const Home = () => {
         </div>
       </section>
       {/* About Us Section */}
-      <section className="py-16 px-4 bg-gray-100">
+      <section className="py-16 px-4 bg-blue-950 text-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Image */}
             <div className="max-w-full mx-auto md:mx-0">
               <img
-                src="https://st2.depositphotos.com/3591429/10464/i/450/depositphotos_104648666-stock-photo-group-of-people-brainstorming-on.jpg"
+                src={work}
                 alt="Waitech Computer Engineering"
                 className="rounded-lg"
                 data-aos="zoom-in"
@@ -104,7 +105,7 @@ const Home = () => {
       <section className="py-16 px-4 bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://aul.edu.ng/static/images/reviews/computerengineering.jpg')] bg-no-repeat bg-center bg-cover">
         <div className="container mx-auto text-white">
           <h2
-            className="text-3xl font-bold mb-8 text-bold text-center"
+            className="text-3xl font-bold mb-8 text-bold md:text-center"
             data-aos="zoom-in"
           >
             Services Offered by Waitech Computer Engineering
@@ -162,7 +163,7 @@ const Home = () => {
         <div className="container mx-auto" data-aos="zoom-in">
           <h2
             data-aos="zoom-in"
-            className="text-[30px] font-bold mb-8 text-center"
+            className="text-[30px] font-bold mb-8 md:text-center"
           >
             List of Quality Products we offer
           </h2>

@@ -10,26 +10,26 @@ const Product = () => {
   return (
     <div>
       <div className="buttons flex w-full justify-center my-3">
-        <div className="btn-group btn-group-vertical lg:btn-group-horizontal">
+        <div className="flex-col md:flex-row flex">
           <button
-            className="btn mx-4 btn-primary"
+            className="btn m-1 btn-primary"
             onClick={() => filter("laptop")}
           >
             Laptops
           </button>
           <button
-            className="btn mx-4 btn-primary"
+            className="btn m-1 btn-primary"
             onClick={() => filter("keyboard")}
           >
             Keyboards
           </button>
           <button
-            className="btn mx-4 btn-primary"
+            className="btn m-1 btn-primary"
             onClick={() => filter("mouse")}
           >
             Mouses
           </button>
-          <button className="btn mx-4 btn-primary">
+          <button className="btn m-1 btn-primary">
             <Link to="/contact">Contanct us for more info</Link>
           </button>
         </div>

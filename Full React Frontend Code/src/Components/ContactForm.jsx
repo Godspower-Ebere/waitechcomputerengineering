@@ -31,7 +31,7 @@ const ContactForm = () => {
   return (
     <div class="container mx-auto py-10">
       <ToastContainer />
-      <h1 class="text-4xl font-bold text-center mb-5" data-aos="zoom-in">
+      <h1 class="text-4xl font-bold md:text-center mb-5" data-aos="zoom-in">
         Have questions? Shoot us an email.{" "}
       </h1>
 

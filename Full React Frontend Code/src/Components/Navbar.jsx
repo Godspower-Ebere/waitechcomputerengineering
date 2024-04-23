@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FiHome, FiInfo, FiLayers, FiMail } from "react-icons/fi"; // Importing react icons for the example
-
+import { FiHome, FiInfo, FiMail, FiTool } from "react-icons/fi"; // Importing react icons for the example
+import { AiOutlineMenu } from "react-icons/ai"; // Importing react icons for the example
+import logo from "../assets/waitech logo png.png";
 const Navbar = () => {
   return (
     <div>
@@ -11,31 +12,22 @@ const Navbar = () => {
           {/* Navbar */}
           <div className="w-full navbar bg-base-300">
             <div className="flex-none lg:hidden">
-              <label
-                htmlFor="my-drawer-3"
-                aria-label="open sidebar"
-                className="btn btn-square btn-ghost"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block w-6 h-6 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
+              <label htmlFor="my-drawer-3" aria-label="open sidebar">
+                <AiOutlineMenu
+                  className="btn btn-square btn-ghost"
+                  size={80}
+                ></AiOutlineMenu>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2 text-lg font-bold text-u">
-              Waitech
+            <div className="flex-1 px-2 mx-2 text-lg font-bold ml-[40%]  sm:ml-[60%] lg:ml-0">
+              <img
+                src={logo}
+                alt="waitech computer Engineering"
+                className="w-[170px]"
+              />
             </div>
             <div className="flex-none hidden lg:block">
-              <ul className="menu menu-horizontal">
+              <ul className="menu menu-horizontal text-[18px]">
                 {/* Navbar menu content here */}
                 <li>
                   <NavLink exact to="/" activeClassName="active">
@@ -51,7 +43,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink to="/services" activeClassName="active">
-                    <FiLayers className="inline-block mr-2" />
+                    <FiTool className="inline-block mr-2" />
                     Services
                   </NavLink>
                 </li>
@@ -65,33 +57,33 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="drawer-side ">
+        <div className="drawer-side z-50">
           <label
             htmlFor="my-drawer-3"
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200">
+          <ul className="menu text-2xl p-4 w-80 min-h-full bg-base-200">
             {/* Sidebar content here */}
-            <li>
+            <li className="mb-6">
               <NavLink exact to="/" activeClassName="active">
                 <FiHome className="inline-block mr-2" />
                 Home
               </NavLink>
             </li>
-            <li>
+            <li className="mb-6">
               <NavLink to="/about" activeClassName="active">
                 <FiInfo className="inline-block mr-2" />
                 About us
               </NavLink>
             </li>
-            <li>
+            <li className="mb-6">
               <NavLink to="/services" activeClassName="active">
-                <FiLayers className="inline-block mr-2" />
+                <FiTool className="inline-block mr-2" />
                 Services
               </NavLink>
             </li>
-            <li>
+            <li className="mb-6">
               <NavLink to="/contact" activeClassName="active">
                 <FiMail className="inline-block mr-2" />
                 Contact
